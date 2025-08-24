@@ -1,0 +1,14 @@
+{
+    "name": "com.nitou.my-package-name",
+    "version": "0.1.0",
+    "displayName": "",
+    "description": "",
+    "author": {
+        "name": "Nitou",
+        "url": "https://github.com/nitou-kanazawa"
+    },
+    "unity": "6000.0",
+    "license": "MIT License",
+    "category": "",
+    "keywords": [ ]
+}

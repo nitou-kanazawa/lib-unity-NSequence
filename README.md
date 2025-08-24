@@ -7,6 +7,33 @@
 
 ## 特徴
 
+#### 基本要素
+**IProcess** :
+```cs
+public interface IProcess {
+    UniTask RunAsync(PausableToken pausableToken, CancellationToken cancellationToken = default);
+}
+```
+
+**Swquence** :
+```cs
+public sealed class Sequence : IProcess {
+    private IEnumerable<IProcess> _processes;
+
+    public Sequence(IEnumerable<IProcess> processes) {
+        _processes = processes ?? throw new ArgumentNullException(nameof(processes));
+    }
+
+    public async UniTask RunAsync(PausableToken pausableToken, CancellationToken cancellationToken){
+        foreach(var process in _processes) {
+            // ポーズ待機
+            await pausableToken.WaitWhilePaused(cancellationToken);
+            // 子プロセス
+            await process.RunAsync(pausableToken, cancellationToken);
+        }
+    }
+}
+```
 
 
 ## セットアップ

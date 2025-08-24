@@ -1,8 +1,8 @@
 {
-    "name": "com.nitou.my-package-name",
+    "name": "com.nitou.nsequence",
     "version": "0.1.0",
-    "displayName": "",
-    "description": "",
+    "displayName": "NSequence",
+    "description": "Handle async process sequence",
     "author": {
         "name": "Nitou",
         "url": "https://github.com/nitou-kanazawa"

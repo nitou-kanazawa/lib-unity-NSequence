@@ -46,14 +46,14 @@ public sealed class Sequence : IProcess {
 2. 「+」ボタン > Add package from git URL
 3. 以下のURLを入力する
 ```
-https://github.com/annulusgames/LitMotion.git?path=<パッケージパス>
+https:/github.com/nitou-kanazawa/lib-unity-NSequence.git?path=<パッケージパス>
 ```
 
 あるいはPackages/manifest.jsonを開き、dependenciesブロックに以下を追記
 ```
 {
     "dependencies": {
-        "com.annulusgames.lit-motion": "https://github.com/annulusgames/LitMotion.git?path=<パッケージパス>"
+        "com.annulusgames.lit-motion": "https://github.com/nitou-kanazawa/lib-unity-NSequence.git?path=<パッケージパス>"
     }
 }
 ```
